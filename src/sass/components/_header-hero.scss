@@ -9,25 +9,13 @@
 .header__section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-top: 6px;
 }
 
 .header__menu-button {
   background-color: transparent;
 }
-
-// .menu-button__menu-icon {
-//   display: none;
-//   .menu-button.is-open & {
-//     display: block;
-//   }
-// }
-
-// .menu-button__close-icon {
-//   .menu-button.is-open & {
-//     display: none;
-//   }
-// }
 
 .nav {
   position: absolute;
@@ -44,11 +32,13 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 1.29;
+  opacity: 0;
   @include trans-func();
   transform: translate(100%, 0);
 }
 .menu-in {
   transform: translate(0, 0);
+  opacity: 1;
 }
 .header__close-button {
   background-color: transparent;
@@ -59,11 +49,9 @@
 .button-buy {
   margin-left: 21px;
   margin-bottom: 19px;
-  // max-width: 209px;
   height: 44px;
   border-radius: 22px;
-  padding-right: 47px;
-  padding-left: 62px;
+  width: 209px;
   font-family: $dm-sans;
   font-style: normal;
   font-weight: bold;
@@ -74,10 +62,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   &:hover,
   &:focus {
     background-color: #ecebeb;
   }
+}
+.header__button-buy {
+  display: none;
 }
 .button-buy__symbol {
   font-size: 20px;
@@ -88,12 +80,13 @@
   &:last-child {
     border-bottom: 1px solid $border-color;
   }
-  .nav-list__link {
-    height: 42px;
-    padding-left: 21px;
-    padding-top: 12px;
-    @include trans-func();
-  }
+}
+.nav-list__link {
+  height: 42px;
+  padding-left: 21px;
+  padding-top: 12px;
+  @include trans-func();
+
   &:hover,
   &:focus {
     color: $accent-color;
@@ -104,14 +97,14 @@
   display: none;
 }
 .hero {
-  position: relative;
+  z-index: 10;
 }
 
 .round {
   display: block;
   position: absolute;
-  left: 16px;
-  top: 27px;
+  left: 36px;
+  top: 83px;
   background-color: $h3-text-color;
   width: 346px;
   height: 344px;
@@ -119,14 +112,14 @@
 }
 .hero__icecream {
   position: absolute;
-  left: 97px;
-  top: 36px;
+  left: 117px;
+  top: 92px;
 }
 
 .hero__info {
   position: absolute;
-  top: 137px;
-  left: 0;
+  top: 193px;
+  left: 20px;
   width: 218px;
 }
 .hero__h1 {
@@ -154,9 +147,9 @@
 }
 .hero__button {
   height: 24px;
+  width: 83px;
   border-radius: 20px;
-  padding-right: 15px;
-  padding-left: 15px;
+
   font-family: $dm-sans;
   font-style: normal;
   font-weight: normal;
@@ -172,6 +165,7 @@
   }
 
   &--red {
+    width: 63px;
     color: $primary-text-color;
     background-color: $accent-color;
 
@@ -184,4 +178,151 @@
 
 .hero__add-info {
   display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 399px;
+    overflow: visible;
+  }
+  .header__section {
+    padding-top: 37px;
+  }
+
+  .header__menu-button {
+    position: absolute;
+    top: 52px;
+    right: 224px;
+    z-index: 50;
+  }
+
+  .nav {
+    width: 254px;
+    height: 1020px;
+  }
+
+  .header__close-button {
+    right: 34px;
+  }
+  .nav-list__link {
+    height: 42px;
+    padding-left: 24px;
+  }
+  .button-buy {
+    width: 186px;
+  }
+  .header__button-buy {
+    display: flex;
+    margin: 0px;
+    width: 160px;
+    position: absolute;
+    top: 38px;
+    right: 34px;
+    z-index: 50;
+  }
+
+  .round {
+    left: 307px;
+    top: 31px;
+    width: 324px;
+    height: 322px;
+  }
+
+  .hero__icecream {
+    left: 378px;
+    top: 63px;
+    width: 143px;
+    height: 336px;
+  }
+
+  .hero__info {
+    top: 102px;
+    left: 34px;
+    width: 162px;
+  }
+  .hero__h1 {
+    font-size: 22px;
+    line-height: 1.14;
+    margin-bottom: 20px;
+  }
+  .hero__span {
+    font-size: 34px;
+    line-height: 0.905;
+  }
+  .hero__add-info {
+    display: block;
+  }
+  .hero__milk {
+    position: absolute;
+    top: 245px;
+    left: 34px;
+  }
+  .hero__milk-info {
+    position: absolute;
+    top: 292px;
+    left: 154px;
+    width: 114px;
+    font-family: $dm-sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 150%;
+  }
+  .hero__arrow-link {
+    position: absolute;
+    top: 347px;
+    left: 154px;
+    width: 18px;
+  }
+
+  .number-list {
+    position: absolute;
+    top: 94px;
+    left: 683px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .number-list__item {
+    &:first-child {
+      margin-bottom: 13px;
+    }
+    position: relative;
+  }
+  .number-list__round {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $bg-color;
+    display: block;
+    position: absolute;
+    top: -2px;
+    right: -10px;
+  }
+  .number-list__header {
+    position: inherit;
+    font-family: $titan;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 1.14;
+    color: $accent-color;
+    text-align: right;
+  }
+  .number-list__info {
+    font-family: $dm-sans;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+  }
+
+  .hero__girl-pic {
+    position: absolute;
+    top: 266px;
+    left: 566px;
+    width: 168px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }
