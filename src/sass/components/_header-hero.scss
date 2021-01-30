@@ -85,10 +85,8 @@
   height: 42px;
   padding-left: 21px;
   padding-top: 12px;
-  @include trans-func();
 
-  &:hover,
-  &:focus {
+  &--selected-page {
     color: $accent-color;
   }
 }
@@ -266,7 +264,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 8px;
-    line-height: 150%;
+    line-height: 1.5;
   }
   .hero__arrow-link {
     position: absolute;
@@ -324,5 +322,139 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
+  .header {
+    height: 665px;
+  }
+
+  .header__button-buy,
+  .header__close-button,
+  .header__menu-button {
+    display: none;
+  }
+  .button-buy {
+    margin-bottom: 0;
+    margin-left: 0px;
+    width: 159px;
+  }
+  .nav {
+    position: inherit;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    opacity: 1;
+    transform: translate(0, 0);
+    font-size: 16px;
+    line-height: 1.31;
+  }
+  .nav-list {
+    display: flex;
+    margin-right: 110px;
+  }
+  .nav-list__item {
+    border: none;
+    margin-right: 35px;
+    &:last-child {
+      border: none;
+      margin-right: 0;
+    }
+  }
+  .nav-list__link {
+    padding-left: 0;
+    padding-top: 13px;
+  }
+
+  .round {
+    left: 474px;
+    top: 53px;
+
+    width: 538px;
+    height: 538px;
+  }
+
+  .hero__icecream {
+    left: 593px;
+    top: 109px;
+    width: 236px;
+    height: 557px;
+  }
+  .hero__info {
+    top: 176px;
+    left: 115px;
+    width: 277px;
+  }
+  .hero__h1 {
+    font-size: 38px;
+    line-height: 1.16;
+    margin-bottom: 25px;
+  }
+  .hero__span {
+    font-size: 58px;
+    line-height: 0.905;
+  }
+  .hero__button {
+    height: 40px;
+    width: 138px;
+    border-radius: 20px;
+
+    font-size: 14px;
+    line-height: 1.29;
+
+    &--red {
+      width: 104px;
+    }
+  }
+
+  .hero__milk {
+    top: 434px;
+    left: 77px;
+    width: 188px;
+  }
+  .hero__milk-info {
+    top: 490px;
+    left: 295px;
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .hero__arrow-link {
+    position: absolute;
+    top: 588px;
+    left: 295px;
+    width: 26px;
+  }
+  .number-list {
+    top: 157px;
+    left: 1090px;
+  }
+  .number-list__item {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+
+  .number-list__round {
+    width: 30px;
+    height: 30px;
+    top: -4px;
+    right: -18px;
+  }
+  .number-list__header {
+    font-size: 46px;
+    line-height: 1.15;
+  }
+  .number-list__info {
+    font-size: 14px;
+    line-height: 1.29;
+  }
+
+  .hero__girl-pic {
+    top: 434px;
+    left: 877px;
+    width: 293px;
+  }
 }
