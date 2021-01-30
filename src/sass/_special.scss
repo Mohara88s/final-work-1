@@ -1,0 +1,32 @@
+// visually-hidden
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// containers
+.footer-container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 320px) {
+    width: 320px;
+  }
+  @media all and (min-width: 768px) {
+    width: 768px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 45px;
+    padding-right: 98px;
+  }
+}
