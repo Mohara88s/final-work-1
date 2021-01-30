@@ -1,0 +1,4 @@
+@mixin trans-func($td: 250ms) {
+  transition-duration: $td;
+  transition-timing-function: $timing-function;
+}

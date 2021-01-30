@@ -1,0 +1,32 @@
+// Basic teg-style settings
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  // background-color: red;
+}
+button {
+  text-decoration: none;
+  border: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+svg {
+  display: block;
+}

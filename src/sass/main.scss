@@ -1,17 +1,9 @@
-@import './normalize';
-@import './special';
+@import './utils/normalize';
+@import './utils/basic';
 
-@import './header-hero.scss';
+@import './utils/font';
+@import './utils/variables';
+@import './utils/special';
+@import './utils/trans-func-mixin';
 
-button {
-  text-decoration: none;
-  border: none;
-}
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-svg {
-  display: block;
-}
+@import './components/header-hero';
