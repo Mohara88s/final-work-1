@@ -1,42 +1,61 @@
     <header class="header header-container">
-    <a class="logo" href="#">
-        <img src="./images/header/logo@1x.png" width="199" height="50" alt="Logo with the inscription icecream">
-    </a>
+    <div class="header__section">
+        <a class="logo" href="#">
+            <img src="./images/header/logo@1x.png" width="199" height="50" alt="Logo with the inscription icecream">
+        </a>
+        
+        <button type="button" class="header__menu-button" data-menu-open>
+            <svg width="20" height="12" class="header-icon" aria-label="Переключатель мобильного меню">
+                <use class="icon-menu" href="./images/header/sprite.svg#burger"></use>
+            </svg>
+        </button>
+        
+        <nav class="nav" data-menu>
+            <button type="button" class="header__close-button" data-menu-close>
+                <svg width="14" height="14" class="header-icon" aria-label="Переключатель мобильного меню">
+                    <use class="icon-cross" href="./images/header/sprite.svg#close"></use>
+                </svg>
+            </button>
+            <button type="button" class="button-buy">
+                Buy now<span class="button-buy__symbol">&#160; &#160; &#160; &#62;</span> 
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#">About us</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#">How it’s made?</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#">Our products</a></li>
+                <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <button type="button" class="header__button">
+            Buy now
+        </button>
+    </div>
 
-    <button type="button" class="header__menu-button menu-button is-open">
-        <svg width="20" height=14 aria-label="transition sandwich menu">
-            <use class="menu-button__menu-icon" href="./images/header/sprite.svg#burger"></use>
-            <use class="menu-button__close-icon" href="./images/header/sprite.svg#close"></use>
-            
-        </svg>
-    </button>
-
-    <nav class="nav data-menu">
-        <uv class="nav-list">
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Home</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">About us</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">How it’s made?</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Our products</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#">Contact</a></li>
-        </uv>
-    </nav>
-
-    <button type="button">
-        Buy now
-    </button>
 
     <div class="hero">
-        <h1>ice cream made with <span class="hero__span">passion</span></h1>
 
-        <button type="button">
-            Products
-        </button>
-        
-        <button type="button">
-            How it’s made?
-        </button>
-        
+        <div class="round"></div>
+        <img class="hero__icecream" alt="Logo with the inscription icecream" src="./images/header/slider-icecream-mobile@1x.png">
         <div class="hero__info">
+            <h1 class="hero__h1">ice cream made with <span class="hero__span">passion</span></h1>
+        
+            <ul class="hero-list">
+                <li class="hero-list__item">
+                    <button type="button" class="hero__button hero__button--red">
+                        Products
+                    </button>
+                </li>
+                <li class="hero-list__item">
+                    <button type="button" class="hero__button">
+                        How it’s made?
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="hero__add-info">
             <img alt="Milk" src="./images/header/slider-milk-tablet@1x.png">
         
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
@@ -46,7 +65,7 @@
         
             </a>
         
-            <img alt="Logo with the inscription icecream" src="./images/header/slider-icecream-mobile@1x.png">
+            
         
             <ul>
                 <li>
